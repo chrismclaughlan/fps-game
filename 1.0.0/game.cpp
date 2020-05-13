@@ -17,13 +17,6 @@ namespace GAME
 
 	void run(int argc, char** argv)
 	{
-		// init GLUT and create window
-		glutInit(&argc, argv);
-		glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
-		glutInitWindowPosition(100, 100);  // TODO
-		glutInitWindowSize(320, 320);  // TODO
-		glutCreateWindow("Lighthouse3D - GLUT Tutorial");  // TODO
-	
 		// register callbacks
 		glutDisplayFunc(renderScene);
 		glutReshapeFunc(changeSize);
@@ -50,7 +43,9 @@ namespace GAME
 		// Prevent a divide by zero, when window is too short
 		// (you cant make a window of zero width).
 		if (h == 0)
+		{
 			h = 1;
+		}
 
 		float ratio = w * 1.0 / h;
 
@@ -77,7 +72,8 @@ namespace GAME
 		// Draw entities
 		for (int i = -3; i < 3; i++)
 		{
-			for (int j = -3; j < 3; j++) {
+			for (int j = -3; j < 3; j++)
+			{
 				Entity e(i* 10.0, 0, j * 10.0, 0, -1, 0);
 				e.draw();
 			}
@@ -123,24 +119,34 @@ namespace GAME
 
 	void pressKey(int key, int xx, int yy)
 	{
-		switch (key) {
-		case GLUT_KEY_UP: deltaMove = 0.5f; break;
-		case GLUT_KEY_DOWN: deltaMove = -0.5f; break;
+		switch (key)
+		{
+			case GLUT_KEY_UP:
+				deltaMove = 0.5f;
+				break;
+			case GLUT_KEY_DOWN:
+				deltaMove = -0.5f;
+				break;
 		}
 	}
 
 	void releaseKey(int key, int x, int y)
 	{
-		switch (key) {
-		case GLUT_KEY_UP:
-		case GLUT_KEY_DOWN: deltaMove = 0; break;
+		switch (key)
+		{
+			case GLUT_KEY_UP:
+
+			case GLUT_KEY_DOWN:
+				deltaMove = 0;
+				break;
 		}
 	}
 
 	void mouseMove(int x, int y)
 	{
 		// this will only be true when the left button is down
-		if (xOrigin >= 0) {
+		if (xOrigin >= 0)
+		{
 			// update camera's direction
 			deltaAngle = (x - xOrigin) * 0.001f;
 			player->updateCamera(deltaAngle, angle);
@@ -150,14 +156,16 @@ namespace GAME
 	void mouseButton(int button, int state, int x, int y)
 	{
 		// only start motion if the left button is pressed
-		if (button == GLUT_LEFT_BUTTON) {
-
+		if (button == GLUT_LEFT_BUTTON)
+		{
 			// when the button is released
-			if (state == GLUT_UP) {
+			if (state == GLUT_UP)
+			{
 				angle += deltaAngle;
 				xOrigin = -1;
 			}
-			else {// state = GLUT_DOWN
+			else  // state = GLUT_DOWN
+			{
 				xOrigin = x;
 			}
 		}

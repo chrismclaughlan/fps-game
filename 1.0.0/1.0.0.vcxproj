@@ -154,11 +154,13 @@
     <ClCompile Include="clientwindow.h" />
     <ClCompile Include="clientwindow.cpp" />
     <ClCompile Include="game.cpp" />
+    <ClCompile Include="gamewindow.cpp" />
     <ClCompile Include="player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="entity.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="gamewindow.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="types.h" />
   </ItemGroup>
