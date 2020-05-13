@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="apps">
+      <UniqueIdentifier>{e9a08a20-9bde-4640-b2d9-472a9185a33b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game">
+      <UniqueIdentifier>{1bb988ca-5129-4bdd-b34d-ea57f8cfdeb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\inc">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="game\src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="client">
+      <UniqueIdentifier>{295a359d-0774-48e1-9081-a4f24ac48fb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="client\inc">
+      <UniqueIdentifier>{c814ef77-f62f-4d78-8e92-8f237e2c1c00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="client\src">
+      <UniqueIdentifier>{3c6da5a8-183d-4bcf-800a-b794cfcc45f8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="game-client.cpp">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>game\src</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>game\src</Filter>
+    </ClCompile>
+    <ClCompile Include="clientwindow.h">
+      <Filter>client\inc</Filter>
+    </ClCompile>
+    <ClCompile Include="clientwindow.cpp">
+      <Filter>client\src</Filter>
+    </ClCompile>
+    <ClCompile Include="entity.cpp">
+      <Filter>game\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="game.h">
+      <Filter>game\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="types.h" />
+    <ClInclude Include="player.h">
+      <Filter>game\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="entity.h">
+      <Filter>game\inc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
+</Project>
