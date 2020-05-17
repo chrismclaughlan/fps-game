@@ -2,4 +2,4 @@
 
 ## TODO
 - Convert to OOP
-- SINGLETON? (SW Engineering slide 23_design_patterns.pdf)
+- SINGLETON? (SW Engineering slide 23_design_patterns.pdf OR https://www.dofactory.com/net/design-patterns#list)
