@@ -2,3 +2,4 @@
 
 ## TODO
 - Convert to OOP
+- SINGLETON? (SW Engineering slide 23_design_patterns.pdf)
